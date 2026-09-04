@@ -1,0 +1,3 @@
+MY APP FINAL BETA
+Version: 1.0.0-beta
+Baseline: Approved Home UI + complete functional core

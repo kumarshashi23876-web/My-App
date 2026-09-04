@@ -1,0 +1,21 @@
+MY APP — RELEASE READY SOURCE
+
+App UI baseline: FINAL
+App icon: FINAL
+Android source: READY
+Demo mode: READY
+Admin panel: READY
+PHP/MySQL API: READY
+Login/Register: READY
+Favorites: READY
+Notifications center: READY
+Ads management: READY
+Users/analytics: READY
+APK cloud build workflow: READY
+Hosting deploy package: READY
+
+Not embedded because they are account-specific credentials:
+- live domain/API URL
+- database login
+- Firebase credentials
+- Android release signing key

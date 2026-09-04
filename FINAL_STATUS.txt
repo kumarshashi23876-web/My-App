@@ -1,0 +1,14 @@
+MY APP FINAL BASELINE v1.0.0
+
+SOURCE: FINALIZED
+ICON: FINALIZED AND EMBEDDED
+UI BASELINE: FINALIZED
+BACKEND/API: INCLUDED
+ADMIN PANEL: INCLUDED
+LOGIN/FAVORITES/NOTIFICATIONS/ADS/USERS/ANALYTICS: INCLUDED
+
+Remaining deployment credentials:
+- Live API domain
+- Database credentials
+- Firebase project credentials
+- Android signing key

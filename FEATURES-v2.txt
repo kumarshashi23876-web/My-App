@@ -1,0 +1,37 @@
+MY APP v2 FEATURE CHECKLIST
+
+ANDROID
+[✓] Dynamic categories
+[✓] Dynamic links
+[✓] Global search
+[✓] Favorites
+[✓] Featured links
+[✓] Short descriptions
+[✓] Share links
+[✓] In-app WebView
+[✓] External browser/app mode
+[✓] Click tracking
+
+ADMIN
+[✓] Login
+[✓] Categories CRUD
+[✓] Links CRUD
+[✓] Active/Inactive
+[✓] Sort order
+[✓] Featured
+[✓] Description
+[✓] Logo URL
+[✓] Logo upload
+[✓] Dashboard
+[✓] Click analytics
+[✓] Top links
+[✓] JSON export
+[✓] App settings
+
+SERVER
+[✓] PHP/MySQL
+[✓] API
+[✓] CSRF
+[✓] Prepared statements
+[✓] Password hashing
+[✓] Upload validation
