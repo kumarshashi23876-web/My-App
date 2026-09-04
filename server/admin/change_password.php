@@ -1,0 +1,6 @@
+<?php
+require '_header.php';$msg='';$error='';
+if($_SERVER['REQUEST_METHOD']==='POST'){try{verify_csrf();$old=(string)($_POST['old']??'');$new=(string)($_POST['new']??'');if(strlen($new)<10)throw new RuntimeException('New password must be at least 10 characters');$s=$pdo->prepare("SELECT password_hash FROM admins WHERE id=?");$s->execute([(int)$_SESSION['admin_id']]);$hash=$s->fetchColumn();if(!$hash||!password_verify($old,$hash))throw new RuntimeException('Current password is incorrect');$pdo->prepare("UPDATE admins SET password_hash=? WHERE id=?")->execute([password_hash($new,PASSWORD_DEFAULT),(int)$_SESSION['admin_id']]);$msg='Password changed.';}catch(Throwable $e){$error=$e->getMessage();}}
+?>
+<h1>Change Password</h1><?php if($msg):?><div class="success"><?=e($msg)?></div><?php endif;?><?php if($error):?><div class="error"><?=e($error)?></div><?php endif;?>
+<div class="card"><form method="post"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><label>Current Password</label><input type="password" name="old" required><label>New Password</label><input type="password" name="new" minlength="10" required><button>Change Password</button></form></div><?php require '_footer.php';?>

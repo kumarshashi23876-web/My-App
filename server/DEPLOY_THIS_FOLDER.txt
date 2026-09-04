@@ -1,0 +1,9 @@
+Upload the contents of this SERVER folder to your PHP/MySQL HTTPS hosting.
+
+Then:
+1. Copy config.example.php to config.php
+2. Enter DB credentials
+3. Open install.php
+4. Create the first admin
+5. Delete/rename install.php
+6. Open admin/login.php

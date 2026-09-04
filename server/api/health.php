@@ -1,0 +1,1 @@
+<?php declare(strict_types=1); header('Content-Type: application/json; charset=utf-8'); try{require dirname(__DIR__).'/lib/bootstrap.php';$pdo->query('SELECT 1');echo json_encode(['success'=>true,'service'=>'myapp-api','time'=>date(DATE_ATOM)]);}catch(Throwable $e){http_response_code(500);echo json_encode(['success'=>false,'service'=>'myapp-api']);}
