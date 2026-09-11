@@ -1,4 +1,4 @@
-package in.myapp.portal
+package com.myapp.portal
 
 import android.content.Context
 import android.provider.Settings

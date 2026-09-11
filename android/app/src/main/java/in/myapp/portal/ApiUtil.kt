@@ -1,4 +1,4 @@
-package in.myapp.portal
+package com.myapp.portal
 
 import org.json.JSONObject
 import java.io.BufferedReader

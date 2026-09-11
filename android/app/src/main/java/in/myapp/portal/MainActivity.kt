@@ -1,4 +1,4 @@
-package in.myapp.portal
+package com.myapp.portal
 
 import android.app.Activity
 import android.content.Intent

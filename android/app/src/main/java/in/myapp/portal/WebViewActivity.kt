@@ -1,4 +1,4 @@
-package in.myapp.portal
+package com.myapp.portal
 
 import android.annotation.SuppressLint
 import android.app.Activity

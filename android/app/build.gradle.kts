@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "in.myapp.portal"
+    namespace = "com.myapp.portal"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "in.myapp.portal"
+        applicationId = "com.myapp.portal"
         minSdk = 23
         targetSdk = 35
         versionCode = 1

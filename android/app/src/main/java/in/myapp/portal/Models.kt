@@ -1,4 +1,4 @@
-package in.myapp.portal
+package com.myapp.portal
 
 data class LinkItem(
     val id: Int,
