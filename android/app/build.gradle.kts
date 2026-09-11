@@ -14,12 +14,19 @@ android {
         versionCode = 1
         versionName = "1.0.0"
     }
-}
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
 
 /*
 RELEASE SIGNING TEMPLATE
-------------------------
 For a signed Play Store build, configure a signing key in Android Studio
 or use CI secrets. Do not commit real passwords/keystore secrets to source control.
 */
