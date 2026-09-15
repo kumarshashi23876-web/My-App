@@ -1,4 +1,4 @@
-package com.myapp.portal
+package in.myapp.portal
 
 object AppConfig {
     // FINAL DEPLOYMENT VALUE: replace with your live HTTPS API URL.

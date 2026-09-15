@@ -1,4 +1,4 @@
-package com.myapp.portal
+package in.myapp.portal
 
 import android.app.Activity
 import android.content.Intent
@@ -190,7 +190,7 @@ class MainActivity : Activity() {
     }
 
     private fun refreshNotificationBadge(){
-        thread{try{val j=JSONObject(ApiUtil.get(ApiUtil.endpoint("notifications.php"),token().ifBlank{null}));val unread=j.optInt("unread_count",0);runOnUiThread{notificationDot.visibility=if(unread>0)View.VISIBLE else View.GONE}}catch(_:Exception){}}
+        thread{try{val j=JSONObject(ApiUtil.get(ApiUtil.endpoint("notifications.php"),token().takeIf { it.isNotBlank() }));val unread=j.optInt("unread_count",0);runOnUiThread{notificationDot.visibility=if(unread>0)View.VISIBLE else View.GONE}}catch(_:Exception){}}
     }
     private fun markNotificationRead(id:Int){
         val t=token();if(t.isBlank())return
@@ -199,7 +199,7 @@ class MainActivity : Activity() {
     private fun loadNotifications(){
         currentMode="notifications";showHomeBlocks(false);sectionTitle.visibility=View.VISIBLE;sectionTitle.text="Notifications";linkContainer.removeAllViews();updateNav();linkContainer.addView(infoCard("🔔","Loading notifications","Please wait..."))
         thread{try{
-            val json=JSONObject(ApiUtil.get(ApiUtil.endpoint("notifications.php"),token().ifBlank{null}));val arr=json.getJSONArray("notifications")
+            val json=JSONObject(ApiUtil.get(ApiUtil.endpoint("notifications.php"),token().takeIf { it.isNotBlank() }));val arr=json.getJSONArray("notifications")
             runOnUiThread{linkContainer.removeAllViews();notificationDot.visibility=if(json.optInt("unread_count",0)>0)View.VISIBLE else View.GONE
                 if(arr.length()==0)linkContainer.addView(infoCard("🔔","No new notifications","Important updates will appear here.")) else for(i in 0 until arr.length()){
                     val n=arr.getJSONObject(i);val id=n.optInt("id");val url=n.optString("target_url","");val read=n.optInt("is_read",0)==1

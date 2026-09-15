@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.myapp.portal"
+    namespace = "in.myapp.portal"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.myapp.portal"
+        applicationId = "in.myapp.portal"
         minSdk = 23
         targetSdk = 35
         versionCode = 1
@@ -27,6 +27,7 @@ android {
 
 /*
 RELEASE SIGNING TEMPLATE
+------------------------
 For a signed Play Store build, configure a signing key in Android Studio
 or use CI secrets. Do not commit real passwords/keystore secrets to source control.
 */
